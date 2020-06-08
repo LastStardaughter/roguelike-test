@@ -1,0 +1,12 @@
+@font-face {
+  font-family: Metrickal;
+  src: url(./Metrickal-Regular.otf);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  line-height: 1.2;
+  margin: 0;
+  font-family: Metrickal, monospace;
+}
