@@ -7,7 +7,8 @@ class MeleeAttacker {
     if( fovMap.indexOf(`${actor.x},${actor.y}`) !== -1 ) {
       if( actor.distanceTo(target) >= 2 ) {
         actor.moveToward(target, level, actors);
-      } else if (target.combat.hp > 0) {
+      } //else if (target.combat.hp > 0) {
+        else if (target.char!='%'){
         const attackResults = actor.combat.attack(target);
         results = [...results, ...attackResults];
       }

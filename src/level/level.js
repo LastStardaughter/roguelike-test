@@ -108,6 +108,7 @@ export default class Level {
       // at x, y.
       if(! entities.some( e => e.x === x && e.y === y ) ) {
         let enemy;
+        /*
         // 80% chance new enemy is an orc, 20% chance it's a troll
         if( randInt(1, 100) <= 80 ) {
           const combat = new Combat(10, 0, 3);
@@ -119,7 +120,10 @@ export default class Level {
           const ai = new MeleeAttacker();
           enemy = new Actor('troll', x, y, 'T', colors.DARKER_GREEN, {combat, ai});
 
-        }
+        }*/
+        const combat=new Combat();
+        const ai=new MeleeAttacker();
+        enemy = new Actor('zombie', x,y, 'z', colors.DARKER_SEPIA, {combat, ai});
         entities.push(enemy);
       }
     }

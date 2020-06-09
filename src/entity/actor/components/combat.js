@@ -1,4 +1,5 @@
 export default class Combat {
+  /*
   constructor(hp, defense, power) {
     this.maxHp = hp;
     this.hp = hp;
@@ -33,4 +34,18 @@ export default class Combat {
 
     return results;
   }
+  */
+ constructor(){}
+ takeDamage(){
+  let results=[];
+  results.push({ dead: this.owner });
+  return results;
+ }
+ attack(target){
+  let results = [];
+  const ownerName = this.owner.name.slice(0, 1).toUpperCase() + this.owner.name.slice(1);
+  results = [...results,  ...target.combat.takeDamage()];
+  results.push({ message: `${ownerName} attacks ${target.name}.`});
+  return results;
+ }
 }
