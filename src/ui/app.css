@@ -10,3 +10,9 @@ body {
   margin: 0;
   font-family: Metrickal, monospace;
 }
+.layout {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  background: #000;
+}

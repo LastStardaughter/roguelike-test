@@ -1,3 +1,5 @@
+import {Message} from '../../../lib/messageLog';
+
 export default class Combat {
   /*
   constructor(hp, defense, power) {
@@ -45,7 +47,7 @@ export default class Combat {
   let results = [];
   const ownerName = this.owner.name.slice(0, 1).toUpperCase() + this.owner.name.slice(1);
   results = [...results,  ...target.combat.takeDamage()];
-  results.push({ message: `${ownerName} attacks ${target.name}.`});
+  results.push({ message: new Message(`${ownerName} attacks ${target.name}.`)});
   return results;
  }
 }
